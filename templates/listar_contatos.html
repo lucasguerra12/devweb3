@@ -1,0 +1,30 @@
+<!-- templates/listar_contatos.html -->
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Contatos</title>
+</head>
+<body>
+    <h1>Lista de Contatos</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Email</th>
+            <th>Mensagem</th>
+            <th>Data de Envio</th>
+        </tr>
+        {% for contato in contatos %}
+        <tr>
+            <td>{{ contato.id }}</td>
+            <td>{{ contato.nome }}</td>
+            <td>{{ contato.email }}</td>
+            <td>{{ contato.mensagem }}</td>
+            <td>{{ contato.data_envio }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <a href="/">Voltar para a página inicial</a>
+</body>
+</html>

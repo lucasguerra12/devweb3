@@ -1,0 +1,25 @@
+
+#botoes {
+    display: flex;
+    color: black;
+    justify-content: center;
+    gap: 120px;
+    margin-top: 170px;
+    font-style: italic;
+}
+#botoes :hover {
+    background-color: blue;
+}
+
+#bttn {
+    background-color: gray;
+    height: 50px;
+    width: 350px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+#bttn :hover{
+    background-color: blue;
+
+}
