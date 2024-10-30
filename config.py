@@ -1,6 +1,6 @@
 DATABASE = {
     'host' : 'localhost',
     'user' : 'root',
-    'password' : 'Lucas#12',
+    'password' : 'CHU@28373',
     'database' : 'flaskbd'}
 

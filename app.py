@@ -13,6 +13,21 @@ def db_connection():
     )
 
     return conn
+#testando banco de dados#
+@app.route ('/test_connection')
+def test_connection():
+    try: 
+        connection = db_connection()
+        cursor = connection.cursor()
+        cursor.execute("SELECT DATABASE()")
+        database_name = cursor.fetchone()
+        cursor.close()
+        connection.close()
+
+        return 'deu certo'
+    
+    except mysql.connector.Error as error:
+        return error
 
 @app.route('/')
 def index():
@@ -28,7 +43,7 @@ def contato():
 
         conn = db_connection()
         cursor = conn.cursor()
-        cursor.execute("INSERT INTO contatos (nome,email,mensagem) VALUES (%s,%s,%s)",(nome,email,mensagem))
+        cursor.execute("INSERT INTO contato (nome,email,mensagem) VALUES (%s,%s,%s)",(nome,email,mensagem))
         conn.commit()
         cursor.close()
         conn.close()
@@ -40,7 +55,7 @@ def contato():
 def listar_contatos():
     conn = db_connection()
     cursor = conn.cursor(dictionary=True)
-    cursor.execute("SELECT * FROM contatos")
+    cursor.execute("SELECT * FROM contato")
     contatos = cursor.fetchall()
     cursor.close()
     conn.close()

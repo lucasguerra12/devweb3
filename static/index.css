@@ -1,3 +1,13 @@
+body {
+    background: linear-gradient(to right, rgb(0, 0, 0), rgb(107, 102, 107));
+}
+
+#titulo {
+        font-family: Arial, sans-serif;
+        font-weight: bold; 
+        color: #000000ec; 
+        text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
 
 #botoes {
     display: flex;
@@ -8,7 +18,7 @@
     font-style: italic;
 }
 #botoes :hover {
-    background-color: blue;
+    background-color: rgb(79, 79, 88);
 }
 
 #bttn {
@@ -20,6 +30,6 @@
 }
 
 #bttn :hover{
-    background-color: blue;
+    background-color: rgb(79, 79, 88);
 
 }
